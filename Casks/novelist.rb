@@ -1,9 +1,9 @@
 cask "novelist" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.3.2"
-  sha256 arm:   "1f8bbbeed0a705e4bbe08b55b3933890dee8eb4647dffbb3eef69d2d31dda8f8",
-         intel: "97442e190224d2af76ed62ec6d89421e844bfb72b2a665dc8bb795a2c5a91c99"
+  version "0.4.0"
+  sha256 arm:   "05d6bc73a1f37d4776135cf0cca7be6222ba8ad49c69dbad5007ea17f0bb6a76",
+         intel: "e0a50145277e5668793823d94bb3393ce4938abc82aef99fae8bcc8478d61395"
 
   url "https://github.com/Saber-AI-Research/Novelist/releases/download/v#{version}/Novelist_#{version}_#{arch}.dmg",
       verified: "github.com/Saber-AI-Research/Novelist/"
@@ -17,15 +17,16 @@ cask "novelist" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Novelist.app"
 
   zap trash: [
+    "~/.novelist",
     "~/Library/Application Support/com.novelist.desktop",
     "~/Library/Caches/com.novelist.desktop",
     "~/Library/Logs/com.novelist.desktop",
     "~/Library/Preferences/com.novelist.desktop.plist",
     "~/Library/Saved Application State/com.novelist.desktop.savedState",
-    "~/.novelist",
   ]
 end
