@@ -1,9 +1,9 @@
 cask "novelist" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.5.1"
-  sha256 arm:   "c6e319dd87e526d3920f78855170c6bd252a6fc5431c48cb04f5a8c197b41440",
-         intel: "b7917e5492a254ba3aa75e6e9895bb7127052b57901a096ddcc691f7885392bf"
+  version "0.6.0"
+  sha256 arm:   "e6f387aa1cc6475a9839e11898185fef68c759b69f9f7260230461575128cebb",
+         intel: "93dfbc9c2c7a1457050ecb7eeab61e8295b5772759e238045cb8e0086f5ba6d1"
 
   url "https://github.com/Saber-AI-Research/Novelist/releases/download/v#{version}/Novelist_#{version}_#{arch}.dmg",
       verified: "github.com/Saber-AI-Research/Novelist/"
